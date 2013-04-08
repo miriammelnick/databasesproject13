@@ -8,5 +8,6 @@
 </head>
 <body>
 	<a>Employee Page</a>
+	<p><a href="index.jsp">Go Back</a></p>
 </body>
 </html>

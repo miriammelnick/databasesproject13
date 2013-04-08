@@ -4,9 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Student Housing Home</title>
 </head>
 <body>
 	<a>Student Page</a>
+	<p><a href="roomChange.jsp">Room Change Request</a></p>
+	<p><a href="lookUpStaff.jsp">Staff Directory</a></p>
+	<p><a href="index.jsp">Go Back</a></p>
 </body>
 </html>
