@@ -6,7 +6,6 @@
 <%@ page import="oracle.jdbc.pool.OracleDataSource"%>
 <!-- Database lookup -->
 
-
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">

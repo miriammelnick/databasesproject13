@@ -30,6 +30,7 @@
 </head>
 <body>
 	<H2>Staff Contact Information</H2>
+	<div id="all">
 	<TABLE>
 	<tr>
 	<td>first_name</td><td>last_name</td><td>email</td>
@@ -54,6 +55,9 @@
 	}
 	%>
 	</TABLE>
+	</div>
+	
+	<p><a href="/cs4111.OracleServlet">name</a></p>
 	<p><a href="index.jsp">Student Page</a></p>
 </body>
 </html>
