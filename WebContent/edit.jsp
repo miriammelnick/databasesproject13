@@ -44,7 +44,7 @@
       <td width="54%">&nbsp;&nbsp;
 <%
 	  status=rs.getString(3).trim();
-	  if(status.equals("unresolved")){
+	  if(status.equals("resolved")){
 %>
 		<select name="status" size="1">
           <option value="resolved" selected>resolved</option>
@@ -56,7 +56,7 @@
 %>
 		<select name="status" size="1">
           <option value="resolved" >resolved</option>
-          <option value="unresolved" selected>resolved</option>
+          <option value="unresolved" selected>unresolved</option>
         </select>
 <%
 	  }
