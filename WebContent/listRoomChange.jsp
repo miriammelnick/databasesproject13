@@ -32,9 +32,9 @@
 <div align="left"><font color="#000000" size="3"> </font> </div>
 <table width="75%" border="1" cellspacing="1" cellpadding="1" align="left">
   <tr>
-    <td width=16% align=left>room_change_request_id</td>
-	<td width=16% align=left>status</td>
-	<td width=8% align=left>reason</td>
+    <td width=16% align=left>Room_Change_Request_ID</td>
+	<td width=16% align=left>Reason</td>
+	<td width=8% align=left>Status</td>
 	<td width=12% align=left>Update</td>
 	<td width=12% align=left>Delete</td>
   </tr>
@@ -59,5 +59,6 @@
 		conn.close();
 		}
   %>
+</table>
 </body>
 </html>
