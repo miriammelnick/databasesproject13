@@ -7,5 +7,7 @@
 	Room Change Request Id: <%= sa.getAppointmentId() %><br/>
 	Reason: <%= sa.getReason() %><br/>
 	
+		<p><a href="student.jsp">Student Page</a></p>
+	
 </body>
 </html>

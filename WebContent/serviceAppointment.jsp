@@ -69,6 +69,6 @@
 	
 	
 	
-	<p><a href="index.jsp">Student Page</a></p>
+	<p><a href="student.jsp">Student Page</a></p>
 </body>
 </html>

@@ -26,7 +26,7 @@
 			query = "insert into has_appliance values ('" + 
 				applianceName + "', '" + category + "'," +  
 				roomId + ")";
-			out.print("query: " + query + "<br/>");
+	//		out.print("query: " + query + "<br/>");
 			stmt.executeUpdate(query);
 		} catch (SQLException e) {
 			error_msg = e.getMessage();

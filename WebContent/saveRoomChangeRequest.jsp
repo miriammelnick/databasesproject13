@@ -21,7 +21,7 @@
 		studentId = request.getParameter("student_id").trim();
 		sid = Integer.parseInt(studentId);
 		
-		DateFormat df = new SimpleDateFormat("dd/MM/yy");
+		DateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
 		String formattedDate = df.format(new Date());
 		try {
 /* 			room_change_request.setReason(reason); 

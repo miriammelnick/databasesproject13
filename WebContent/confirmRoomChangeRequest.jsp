@@ -8,5 +8,7 @@
 	Reason: <%= room_change_request.getReason() %><br/>
 	Status: <%= room_change_request.getStatus() %><br/>
 	
+		<p><a href="student.jsp">Student Page</a></p>
+	
 </body>
 </html>

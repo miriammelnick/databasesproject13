@@ -17,7 +17,6 @@
 			conn = ods.getConnection();
 			Statement stmt = conn.createStatement();
 			rset = stmt.executeQuery("select room_id, room_number, building_id from room");
-			//TODO add building name here, not just id
 		} catch (SQLException e) {
 			error_msg = e.getMessage();
 			if( conn != null ) {

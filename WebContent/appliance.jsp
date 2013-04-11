@@ -12,11 +12,11 @@
 		ResultSet appliances = null, rooms = null;
 		String error_msg = "";
 		try {
-		OracleDataSource ods = new OracleDataSource();
-		ods.setURL("jdbc:oracle:thin:mrm2198/coms4111@//w4111f.cs.columbia.edu:1521/ADB"); 
-		conn = ods.getConnection();
-		Statement stmt = conn.createStatement();
-		appliances = stmt.executeQuery("select appliance_name, category, room_id from has_appliance");
+			OracleDataSource ods = new OracleDataSource();
+			ods.setURL("jdbc:oracle:thin:mrm2198/coms4111@//w4111f.cs.columbia.edu:1521/ADB"); 
+			conn = ods.getConnection();
+			Statement stmt = conn.createStatement();
+			appliances = stmt.executeQuery("select appliance_name, category, room_id from has_appliance");
 		} catch (SQLException e) {
 		error_msg = e.getMessage();
 		if( conn != null ) {
