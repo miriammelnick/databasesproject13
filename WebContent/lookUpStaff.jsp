@@ -5,16 +5,21 @@
 <%@ page import="java.sql.*"%>
 <%@ page import="oracle.jdbc.pool.OracleDataSource"%>
 <!-- Database lookup -->
+
+<%!String area, choice; %>
 <%
 		Connection conn = null;
 		ResultSet rset = null;
 		String error_msg = "";
+/*  	  	area=request.getParameter("choice").trim();
+ 		buildingManager.setArea(area);  */
+		//buildingManager.setArea(area); 
 		try {
 		OracleDataSource ods = new OracleDataSource();
 		ods.setURL("jdbc:oracle:thin:mrm2198/coms4111@//w4111f.cs.columbia.edu:1521/ADB"); 
 		conn = ods.getConnection();
 		Statement stmt = conn.createStatement();
-		rset = stmt.executeQuery("select first_name, last_name, email from employee");
+		rset = stmt.executeQuery("select first_name, last_name, email, phone from employee");
 		} catch (SQLException e) {
 		error_msg = e.getMessage();
 		if( conn != null ) {
@@ -33,10 +38,10 @@
 	<div id="all">
 	<TABLE>
 	<tr>
-	<td>first_name</td><td>last_name</td><td>email</td>
+	<td>first_name</td><td>last_name</td><td>email</td><td>phone</td>
 	</tr>
 	<tr>
-	<td><b>----------</b></td><td><b>----------</b></td><td><b>----------</b></td>
+	<td><b>----------</b></td><td><b>----------</b></td><td><b>----------</b></td><td><b>----------</b></td>
 	</tr>
 	<%
 	if(rset != null) {
@@ -44,7 +49,8 @@
 	out.print("<tr>");
 	out.print("<td>" + rset.getString("first_name") + "</td><td>" + 
 	rset.getString("last_name") + "</td>" +
-	"<td>" + rset.getString("email") + "</td>");
+	"<td>" + rset.getString("email") + "</td>"+
+	"<td>" + rset.getString("phone") + "</td>");
 	out.print("</tr>");
 	}
 	} else {
@@ -56,16 +62,17 @@
 	%>
 	</TABLE>
 	</div>
-<%!String choice; %>
-<form name="form1" method="post" action="staff_select.jsp?area=<%=choice%>">
+	<p>Select to see building managers</p>
+<form name="form1" method="post" action="staff_select.jsp">
 		<select name="choice" size="1">
-          <option value="east" selected>East Campus Managers</option>
-          <option value="west">West Campus Managers</option>
-          <option value="onCampus">On Campus Managers</option>
+          <option value="east campus" selected>East Campus Managers</option>
+          <option value="west campus">West Campus Managers</option>
+          <option value="on campus">On Campus Managers</option>
           <option value="other">Other Area Managers</option>
         </select>
         <input type="submit" name="Submit" value="View">
 </form>
+
 	<p><a href="student.jsp">Student Page</a></p>
 </body>
 </html>
