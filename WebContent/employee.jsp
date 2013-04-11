@@ -8,6 +8,7 @@
 </head>
 <body>
 	<a>Employee Page</a>
+	<a href="listRoomChange.jsp">Room Change Request</a>
 	<p><a href="index.jsp">Go Back</a></p>
 </body>
 </html>
