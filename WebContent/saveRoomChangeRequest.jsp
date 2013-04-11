@@ -1,20 +1,28 @@
 <jsp:useBean id="room_change_request" class="cs4111.RoomChangeRequestData" scope="session"/>
 <jsp:setProperty name="room_change_request" property="*"/> 
+<jsp:useBean id="applies_for" class="cs4111.AppliesFor" scope="session"/>
+<jsp:setProperty name="applies_for" property="*"/> 
 
 <!-- This import is necessary for JDBC -->
 <%@page contentType="text/html; charset=utf-8" language="java" import="java.sql.*,java.util.*"  %>
 <%@ page import="oracle.jdbc.pool.OracleDataSource"%>
+<%@ page import="java.io.*,java.util.*,java.util.Date" %>
+<%@ page import="javax.servlet.*,java.text.*" %>
 <!-- Database lookup -->
-<%!	String reason, roomChangeRequestId;
-	int id; %>
+<%!	String reason, roomChangeRequestId, studentId;
+	int rcrid, sid; %>
 <%
 		Connection conn = null;
-		ResultSet rset = null;
 		String error_msg = "";
-		String query = "";
+		String query = "", query2 = "";
 		reason = request.getParameter("reason").trim();
 		roomChangeRequestId = request.getParameter("roomChangeRequestId").trim();
-		id = Integer.parseInt(roomChangeRequestId);
+		rcrid = Integer.parseInt(roomChangeRequestId);
+		studentId = request.getParameter("student_id").trim();
+		sid = Integer.parseInt(studentId);
+		
+		DateFormat df = new SimpleDateFormat("dd/MM/yy");
+		String formattedDate = df.format(new Date());
 		try {
 /* 			room_change_request.setReason(reason); 
 			room_change_request.setRoomChangeRequestId(roomChangeRequestId); */
@@ -23,11 +31,14 @@
 			conn = ods.getConnection();
 			Statement stmt = conn.createStatement();
 			query = "insert into room_change_request values (" + 
-				id + ",' " + 
+				rcrid + ",' " + 
 				reason + "', '" + 
 				"unresolved" + "')";
-			out.print("query: " + query + "<br/>");
+			query2 = "insert into applies_for values (" + sid + ", '" +
+				formattedDate + "', " + rcrid + ")";
+			out.print("query: " + query + "<br/>" + "query2: " + query2 + "<br/>");
 			stmt.executeUpdate(query);
+			stmt.executeUpdate(query2);
 		} catch (SQLException e) {
 			error_msg = e.getMessage();
 			if( conn != null ) {
@@ -40,9 +51,10 @@
 	<a href="confirmRoomChangeRequest.jsp">Continue</a>
 		<%
 	
-		out.print(id + "<br/> " +
-			"unsolved" + "<br/> " +
-			reason);
+		out.print(rcrid + "<br/> " +
+			"unresolved" + "<br/> " +
+			reason + "<br/>");
+		out.print(sid + "<br/>" + formattedDate + "<br/>" + rcrid + "<br/>");
 
 	if( conn != null ) {
 	conn.close();

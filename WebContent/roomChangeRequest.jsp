@@ -1,4 +1,6 @@
 <jsp:useBean id="room_change_request" class="cs4111.RoomChangeRequestData" scope="session"/>
+<jsp:useBean id="applies_for" class="cs4111.AppliesFor" scope="session"/>
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
