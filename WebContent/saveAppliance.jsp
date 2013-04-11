@@ -42,8 +42,7 @@
 	<a href="appliance.jsp">Continue</a>
 		<%
 	
-		out.print("room Id: " + roomId + "<br/> appliance name: " + applianceName + 
-				"<br/> category: " + category + "<br/>");
+		out.print("<meta http-equiv='refresh' content='2;url=appliance.jsp'>");
 
 	if( conn != null ) {
 	conn.close();

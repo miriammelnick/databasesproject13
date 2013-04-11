@@ -63,6 +63,7 @@
 	</select><br/>
 		<input id="submitbutton" name="submitbutton" type="submit" value="submit">
 	</form>
+	<br/><br/>
 	<a href="confirmServiceAppointment.jsp">My appointment is not related to an appliance.</a>
 </body>
 </html>

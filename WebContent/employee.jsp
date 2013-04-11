@@ -9,6 +9,8 @@
 <body>
 	<h1>Employee Page</h1>
 	<p><a href="listRoomChange.jsp">Room Change Request</a></p>
+	<p><a href="listAppliesFor.jsp">Students who have applied for room changes</a></p>
+
 	<p><a href="index.jsp">Log out</a></p>
 </body>
 </html>
