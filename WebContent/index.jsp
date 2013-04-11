@@ -13,7 +13,7 @@
 </head>
 <body>
 	<H2>Log in</H2>
-	<a href="student.jsp">Student</a>
+	<a href="student.jsp">Student</a><br/>
 	<a href="employee.jsp">Employee</a>
 </body>
 </html>
