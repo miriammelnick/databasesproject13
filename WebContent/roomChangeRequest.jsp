@@ -29,25 +29,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>New Room Change Request</title>
-<script type="text/javascript">
-	document.getElementById("#submitbutton").onclick = function() {
-		var reason = document.getElementById("reason").value();
-		if (reason == null || reason=="")
-		  {
-		  	alert("Reason must be filled out");
-		  	return false;
-		  }
-	};
-</script>
+<script type="text/javascript" src="validatious.js"></script>
+
 </head>
 <body>
 	<H2>Submit a Room Change Request</H2>
-	<form id="rcr-form" action="saveRoomChangeRequest.jsp" method="POST">
+	<form id="rcr-form" action="saveRoomChangeRequest.jsp" method="POST" class="validate">
 		<b>Why are you requesting a room change? (required)</b>
 		<br/>
-		<textarea id="reason" name="reason" style="width:300px; height: 150px"></textarea>
+		<textarea id="reason" name="reason" style="width:300px; height: 150px" class="required"></textarea>
 		<br/>
-		Room Change Request ID: <input type="text" name="roomChangeRequestId"></input><br/>
+		Room Change Request ID: <input type="text" name="roomChangeRequestId" class="required numeric"></input><br/>
 		<select style="width:300px " id="student_id" name="student_id">
 	<%
 	if(rset != null) {

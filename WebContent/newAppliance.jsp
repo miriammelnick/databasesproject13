@@ -28,12 +28,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>New Appliance</title>
-
+<script type="text/javascript" src="validatious.js"></script>
 </head>
 <body>
 
 <H2>Add a new appliance</H2>
-	<form id="appliance-form" action="saveAppliance.jsp" method="POST">
+	<form id="appliance-form" action="saveAppliance.jsp" method="POST" class="validate">
 		Select your room:
 		<select id="room_id" name="room_id">
 	<%
@@ -52,7 +52,7 @@
 	%>
   	
 	</select><br/>
-	Appliance Name: <input id="appliance_name" name="appliance_name" type="text"></input><br/>
+	Appliance Name (required): <input id="appliance_name" name="appliance_name" type="text" class="required"></input><br/>
 	Appliance Category: <select id="category" name="category">
 		<option value="kitchen">Kitchen</option>
 		<option value="bathroom">Bathroom</option>
