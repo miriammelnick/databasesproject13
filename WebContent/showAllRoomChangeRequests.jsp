@@ -14,7 +14,7 @@
 		ods.setURL("jdbc:oracle:thin:mrm2198/coms4111@//w4111f.cs.columbia.edu:1521/ADB"); 
 		conn = ods.getConnection();
 		Statement stmt = conn.createStatement();
-		rset = stmt.executeQuery("select room_change_request_id, status, reason from room_change_request");
+		rset = stmt.executeQuery("select room_change_request_id, status, reason from room_change_request");		
 		} catch (SQLException e) {
 		error_msg = e.getMessage();
 		if( conn != null ) {

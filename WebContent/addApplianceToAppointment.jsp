@@ -27,7 +27,7 @@
 			query = "insert into needs_fixing values ('" + 
 				roomId + "', '" + applianceName + "'," +  
 				appointmentId + ")";
-			out.print("query: " + query + "<br/>");
+		//	out.print("query: " + query + "<br/>");
 			stmt.executeUpdate(query);
 		} catch (SQLException e) {
 			error_msg = e.getMessage();
@@ -40,10 +40,9 @@
 <body>
 
 
-	<a href="appliance.jsp">Continue</a>
 		<%
 	
-		//out.print("<meta http-equiv='refresh' content='2;url=appliance.jsp'>");
+		out.println("<font size=3 color=blue>updating, please wait......</font><meta http-equiv='refresh' content='2;url=appliance.jsp'>");
 
 	if( conn != null ) {
 	conn.close();

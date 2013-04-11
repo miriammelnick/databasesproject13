@@ -48,11 +48,10 @@
 %>
 <html>
 <body>
-	<a href="confirmRoomChangeRequest.jsp">Continue</a>
 		<%
 	
-		
-		out.print("<meta http-equiv='refresh' content='2;url=confirmRoomChangeRequest.jsp'>");
+		out.println("<font size=3 color=blue>updating, please wait......</font><meta http-equiv='refresh' content='2;url=confirmRoomChangeRequest.jsp'>");
+
 	if( conn != null ) {
 	conn.close();
 	}
