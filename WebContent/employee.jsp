@@ -8,8 +8,10 @@
 </head>
 <body>
 	<h1>Employee Page</h1>
-	<p><a href="listRoomChange.jsp">Room Change Request</a></p>
-	<p><a href="listAppliesFor.jsp">Students who have applied for room changes</a></p>
+	<p><a href="listRoomChange.jsp">Manage Room Change Requests</a></p>
+	<p><a href="listAppliesFor.jsp">List students who have applied for room changes</a></p>
+	<p><a href="listNeedsFixing.jsp">List broken appliances</a></p>
+	
 
 	<p><a href="index.jsp">Log out</a></p>
 </body>
