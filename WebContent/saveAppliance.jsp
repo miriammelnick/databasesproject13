@@ -37,6 +37,8 @@
 %>
 <html>
 <body>
+
+
 	<a href="appliance.jsp">Continue</a>
 		<%
 	

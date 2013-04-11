@@ -41,16 +41,17 @@
 <body>
 	<H2>Apply for a Service Appointment</H2>
 	<form id="sa-form" action="saveServiceAppointment.jsp" method="POST">
-		<b>Why are you requesting a service appointment? (required)</b>
+		<b>NOTE: After you apply for an appointment, you can link this appointment to a broken appliance.</b><br/><br/>
+		Why are you requesting a service appointment? (required)
 		<br/>
 		<textarea id="reason" name="reason" style="width:300px; height: 150px"></textarea>
 		<br/>
 		Appointment ID: <input type="text" name="appointmentId"></input><br/>
-		<select style="width:300px " id="student_id" name="student_id">
+		<select style="width:300px " id="room_id" name="room_id">
 	<%
 	if(rset != null) {
 	while(rset.next()) {
-		out.print("<option value='"+ rset.getString("student_id") + "'> " +rset.getString("first_name") + " " +
+		out.print("<option value='"+ rset.getString("room_id") + "'> " +rset.getString("first_name") + " " +
 			rset.getString("last_name")+ ", room " + rset.getString("room_id"));
 		out.print("</option>");
 		}

@@ -36,7 +36,7 @@
 				"unresolved" + "')";
 			query2 = "insert into applies_for values (" + sid + ", '" +
 				formattedDate + "', " + rcrid + ")";
-			out.print("query: " + query + "<br/>" + "query2: " + query2 + "<br/>");
+			//out.print("query: " + query + "<br/>" + "query2: " + query2 + "<br/>");
 			stmt.executeUpdate(query);
 			stmt.executeUpdate(query2);
 		} catch (SQLException e) {

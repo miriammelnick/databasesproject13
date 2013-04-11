@@ -9,6 +9,8 @@
 <body>
 	<a>Student Page</a>
 	<p><a href="roomChangeRequest.jsp">Room Change Request</a></p>
+	<p><a href="serviceAppointment.jsp">Apply for Service Appointment</a></p>
+	<p><a href="newAppliance.jsp">Add an Appliance</a></p>
 	<p><a href="lookUpStaff.jsp">Staff Directory</a></p>
 	<p><a href="index.jsp">Log out</a></p>
 </body>
