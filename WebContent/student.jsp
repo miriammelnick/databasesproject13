@@ -10,6 +10,6 @@
 	<a>Student Page</a>
 	<p><a href="roomChange.jsp">Room Change Request</a></p>
 	<p><a href="lookUpStaff.jsp">Staff Directory</a></p>
-	<p><a href="index.jsp">Go Back</a></p>
+	<p><a href="index.jsp">Log out</a></p>
 </body>
 </html>

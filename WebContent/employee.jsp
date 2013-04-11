@@ -7,8 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a>Employee Page</a>
-	<a href="listRoomChange.jsp">Room Change Request</a>
-	<p><a href="index.jsp">Go Back</a></p>
+	<h1>Employee Page</h1>
+	<p><a href="listRoomChange.jsp">Room Change Request</a></p>
+	<p><a href="index.jsp">Log out</a></p>
 </body>
 </html>

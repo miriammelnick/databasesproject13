@@ -84,5 +84,6 @@
 			}
 		}
  %>
+ 	<p><a href="employee.jsp">Employee Page</a></p>
 </body>
 </html>

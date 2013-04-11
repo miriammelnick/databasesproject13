@@ -12,7 +12,7 @@
 <title>Online Campus Housing</title>
 </head>
 <body>
-	<H2>Enter As</H2>
+	<H2>Log in</H2>
 	<a href="student.jsp">Student</a>
 	<a href="employee.jsp">Employee</a>
 </body>

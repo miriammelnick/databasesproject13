@@ -56,8 +56,16 @@
 	%>
 	</TABLE>
 	</div>
-	
-	<p><a href="/cs4111.OracleServlet">name</a></p>
-	<p><a href="index.jsp">Student Page</a></p>
+<%!String choice; %>
+<form name="form1" method="post" action="staff_select.jsp?area=<%=choice%>">
+		<select name="choice" size="1">
+          <option value="east" selected>East Campus Managers</option>
+          <option value="west">West Campus Managers</option>
+          <option value="onCampus">On Campus Managers</option>
+          <option value="other">Other Area Managers</option>
+        </select>
+        <input type="submit" name="Submit" value="View">
+</form>
+	<p><a href="student.jsp">Student Page</a></p>
 </body>
 </html>

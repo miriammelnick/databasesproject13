@@ -30,6 +30,7 @@
 </head>
 <body>
 <div align="left"><font color="#000000" size="3"> </font> </div>
+<div>
 <table width="75%" border="1" cellspacing="1" cellpadding="1" align="left">
   <tr>
     <td width=16% align=left>Room_Change_Request_id</td>
@@ -60,5 +61,7 @@
 		}
   %>
 </table>
+	<p><a href="employee.jsp">Employee Page</a></p>
+</div>
 </body>
 </html>
