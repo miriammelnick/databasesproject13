@@ -1,4 +1,4 @@
-<jsp:useBean id="room_change_request" class="cs4111.RoomChangeRequestData" scope="session"/>
+<jsp:useBean id="sa" class="cs4111.ServiceAppointment" scope="session"/>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -26,7 +26,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>New Room Change Request</title>
+<title>New Service Appointment</title>
 <script type="text/javascript">
 	document.getElementById("#submitbutton").onclick = function() {
 		var reason = document.getElementById("reason").value();
@@ -39,13 +39,13 @@
 </script>
 </head>
 <body>
-	<H2>Submit a Room Change Request</H2>
-	<form id="rcr-form" action="saveRoomChangeRequest.jsp" method="POST">
-		<b>Why are you requesting a room change? (required)</b>
+	<H2>Apply for a Service Appointment</H2>
+	<form id="sa-form" action="saveServiceAppointment.jsp" method="POST">
+		<b>Why are you requesting a service appointment? (required)</b>
 		<br/>
 		<textarea id="reason" name="reason" style="width:300px; height: 150px"></textarea>
 		<br/>
-		Room Change Request ID: <input type="text" name="roomChangeRequestId"></input><br/>
+		Appointment ID: <input type="text" name="appointmentId"></input><br/>
 		<select style="width:300px " id="student_id" name="student_id">
 	<%
 	if(rset != null) {
@@ -68,6 +68,6 @@
 	
 	
 	
-	<p><a href="student.jsp">Student Page</a></p>
+	<p><a href="index.jsp">Student Page</a></p>
 </body>
 </html>

@@ -8,7 +8,7 @@
 </head>
 <body>
 	<a>Student Page</a>
-	<p><a href="roomChange.jsp">Room Change Request</a></p>
+	<p><a href="roomChangeRequest.jsp">Room Change Request</a></p>
 	<p><a href="lookUpStaff.jsp">Staff Directory</a></p>
 	<p><a href="index.jsp">Log out</a></p>
 </body>
