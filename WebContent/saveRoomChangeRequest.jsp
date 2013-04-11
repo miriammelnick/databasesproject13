@@ -51,11 +51,8 @@
 	<a href="confirmRoomChangeRequest.jsp">Continue</a>
 		<%
 	
-		out.print(rcrid + "<br/> " +
-			"unresolved" + "<br/> " +
-			reason + "<br/>");
-		out.print(sid + "<br/>" + formattedDate + "<br/>" + rcrid + "<br/>");
-
+		
+		out.print("<meta http-equiv='refresh' content='2;url=confirmRoomChangeRequest.jsp'>");
 	if( conn != null ) {
 	conn.close();
 	}

@@ -27,26 +27,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>New Service Appointment</title>
-<script type="text/javascript">
-	document.getElementById("#submitbutton").onclick = function() {
-		var reason = document.getElementById("reason").value();
-		if (reason == null || reason=="")
-		  {
-		  	alert("Reason must be filled out");
-		  	return false;
-		  }
-	};
-</script>
+<script type="text/javascript" src="validatious.js"></script>
 </head>
 <body>
 	<H2>Apply for a Service Appointment</H2>
-	<form id="sa-form" action="saveServiceAppointment.jsp" method="POST">
-		<b>NOTE: After you apply for an appointment, you can link this appointment to a broken appliance.</b><br/><br/>
+	<form id="sa-form" action="saveServiceAppointment.jsp" method="POST" class="validate">
 		Why are you requesting a service appointment? (required)
 		<br/>
-		<textarea id="reason" name="reason" style="width:300px; height: 150px"></textarea>
+		<textarea id="reason" name="reason" style="width:300px; height: 150px" class="required"></textarea>
 		<br/>
-		Appointment ID: <input type="text" name="appointmentId"></input><br/>
+		Appointment ID: <input type="text" name="appointmentId" class="required numeric"></input><br/>
 		<select style="width:300px " id="room_id" name="room_id">
 	<%
 	if(rset != null) {

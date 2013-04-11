@@ -61,7 +61,7 @@
 		}
   %>
 </table>
-	<p><a href="employee.jsp">Employee Page</a></p>
+	<p style="clear:left; float:left"><a href="employee.jsp">Employee Page</a></p>
 </div>
 </body>
 </html>

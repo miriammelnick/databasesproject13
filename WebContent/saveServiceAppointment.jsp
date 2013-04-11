@@ -1,5 +1,6 @@
 <jsp:useBean id="sa" class="cs4111.ServiceAppointment" scope="session"/>
 <jsp:setProperty name="sa" property="*"/> 
+<jsp:useBean id="nf" class="cs4111.NeedsFixing" scope="session"/>
 
 <!-- This import is necessary for JDBC -->
 <%@page contentType="text/html; charset=utf-8" language="java" import="java.sql.*,java.util.*"  %>
@@ -62,7 +63,10 @@
   	
 	</select><br/>
 		<input id="submitbutton" name="submitbutton" type="submit" value="submit">
+		<input type="hidden" name="appointmentId" value="<%=id%>">
+		<input type="hidden" name="room_id" value="<%=roomId%>">
 	</form>
+	<br/><br/>
 	<a href="confirmServiceAppointment.jsp">My appointment is not related to an appliance.</a>
 </body>
 </html>
