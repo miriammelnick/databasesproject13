@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Student Housing Home</title>
+<script type="text/javascript" src="validatious.js"></script>
 </head>
 <body>
 	<h2>Student Page</h2>
@@ -12,7 +13,7 @@
 	<form id="search-form" action="search.jsp" method="POST" class="validate">
 		<b>Search Employee Name</b>
 		<br/>
-		<input type="text" id="search" name="search" class="required">
+		<input type="text" id="search" name="search" class="required alpha">
 		<input type="submit" name="Submit" value="Search">
 		<br/>
 	</form>

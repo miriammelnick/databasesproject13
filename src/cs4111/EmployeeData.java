@@ -2,18 +2,18 @@ package cs4111;
 
 public class EmployeeData {
 	int employeeId;
-	String firstNmae, lastName;
+	String firstName, lastName;
 	public int getEmployeeId() {
 		return employeeId;
 	}
 	public void setEmployeeId(int employeeId) {
 		this.employeeId = employeeId;
 	}
-	public String getFirstNmae() {
-		return firstNmae;
+	public String getfirstName() {
+		return firstName;
 	}
-	public void setFirstNmae(String firstNmae) {
-		this.firstNmae = firstNmae;
+	public void setfirstName(String firstName) {
+		this.firstName = firstName;
 	}
 	public String getLastName() {
 		return lastName;

@@ -25,6 +25,7 @@ String error_msg = "";
 	out.print(area);
 %>
 <a>area managers table</a>
+
 <br/>
 <%
  	try{
