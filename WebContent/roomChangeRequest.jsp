@@ -31,7 +31,6 @@
 			maxId = maxIdSet.getInt(1);
 
 			newPK = maxId + 1;
-			out.print(newPK);
 		} catch (SQLException e) {
 			Random r = new Random();
 			newPK = r.nextInt(10000);
