@@ -6,7 +6,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- This import is necessary for JDBC -->
 <%@ page import="java.sql.*"%>
-<%@ page import="java.util.Random"%>
+<%-- <%@ page import="java.util.Random"%> --%>
 <%@ page import="oracle.jdbc.pool.OracleDataSource"%>
 <!-- Database lookup -->
 <%
@@ -20,7 +20,7 @@
 			conn = ods.getConnection();
 			Statement stmt = conn.createStatement();
 			rset = stmt.executeQuery("select first_name, last_name, room_id, student_id from student");
-			OracleDataSource ods2 = new OracleDataSource();
+			/* OracleDataSource ods2 = new OracleDataSource();
 			ods2.setURL("jdbc:oracle:thin:mrm2198/coms4111@//w4111f.cs.columbia.edu:1521/ADB"); 
 			conn2 = ods2.getConnection();
 			Statement stmt2 = conn2.createStatement();
@@ -30,10 +30,10 @@
 			maxIdSet.next();
 			maxId = maxIdSet.getInt(1);
 
-			newPK = maxId + 1;
+			newPK = maxId + 1; */
 		} catch (SQLException e) {
-			Random r = new Random();
-			newPK = r.nextInt(10000);
+			/* Random r = new Random();
+			newPK = r.nextInt(10000) */;
 			error_msg = e.getMessage();
 			if( conn != null ) {
 			conn.close();
@@ -54,7 +54,7 @@
 		<br/>
 		<textarea id="reason" name="reason" style="width:300px; height: 150px" class="required"></textarea>
 		<br/>
-<!-- 		Room Change Request ID: <input type="text" name="roomChangeRequestId" class="required numeric"></input><br/> -->
+ 		Room Change Request ID: <input type="text" name="roomChangeRequestId" class="required numeric"></input><br/>
 		<select style="width:300px " id="student_id" name="student_id">
 	<%
 	if(rset != null) {
@@ -72,7 +72,7 @@
 	%>
   	
 	</select><br/>
-		<input type="hidden" name="roomChangeRequestId" value="<%=newPK %>">
+<%-- 		<input type="hidden" name="roomChangeRequestId" value="<%=newPK %>"> --%>
 		<input id="submitbutton" name="submitbutton" type="submit" value="submit">
 	</form>
 	
