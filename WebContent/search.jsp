@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<jsp:useBean id="buildingManager" class="cs4111.BuildingManagerData" />
+<jsp:useBean id="employeeData" class="cs4111.EmployeeData" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ page import="java.sql.*"%>
 <%@ page import="oracle.jdbc.pool.OracleDataSource"%>
-
+<!-- Database lookup -->
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -12,7 +12,7 @@
 </head>
 <body>
 <%! 
-String areaName, area;
+String search, searchName;
 Connection conn;
 Statement stmt;
 String sql;
@@ -20,11 +20,9 @@ ResultSet rset = null;
 String error_msg = "";
 %>
 <%
-  	area=request.getParameter("choice").trim();
-	buildingManager.setArea(area); 
-	out.print(area);
+  	search=request.getParameter("search").trim();
 %>
-<a>area managers table</a>
+<a>Search Result</a>
 <br/>
 <%
  	try{
@@ -32,7 +30,7 @@ String error_msg = "";
 		ods.setURL("jdbc:oracle:thin:mrm2198/coms4111@//w4111f.cs.columbia.edu:1521/ADB"); 
 		conn = ods.getConnection();
 		stmt = conn.createStatement();
-		sql = "select * from building_manager B, employee M where area='" + area + "' and M.employee_id=B.manager_id";
+		sql = "select * from employee M where M.first_name='" + search + "' or M.last_name='" +search + "'";
 		rset=stmt.executeQuery(sql);
  	}catch (SQLException e) {
 			error_msg = e.getMessage();
@@ -41,7 +39,7 @@ String error_msg = "";
 			}
 			}
  %>
- 	<TABLE>
+  	<TABLE>
 	<tr>
 	<td>first_name</td><td>last_name</td><td>email</td><td>phone</td>
 	</tr>
@@ -59,7 +57,6 @@ String error_msg = "";
 		}
 %>
 	</TABLE>
-	<p><a href="lookUpStaff.jsp">Go Back</a></p>
 	<p><a href="student.jsp">Student Page</a></p>
 </body>
 </html>

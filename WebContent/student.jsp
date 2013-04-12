@@ -7,7 +7,16 @@
 <title>Student Housing Home</title>
 </head>
 <body>
-	<a>Student Page</a>
+	<h2>Student Page</h2>
+	<br/>
+	<form id="search-form" action="search.jsp" method="POST" class="validate">
+		<b>Search Employee Name</b>
+		<br/>
+		<input type="text" id="search" name="search" class="required">
+		<input type="submit" name="Submit" value="Search">
+		<br/>
+	</form>
+	<br/>
 	<p><a href="roomChangeRequest.jsp">Room Change Request</a></p>
 	<p><a href="serviceAppointment.jsp">Apply for Service Appointment</a></p>
 	<p><a href="newAppliance.jsp">Add an Appliance</a></p>
